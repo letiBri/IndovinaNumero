@@ -11,7 +11,7 @@ class Model(object):
 
     def reset(self): #resetto il gioco
         # Questo metodo resetta il gioco in qualsiasi momento
-        self._segreto = random.randint(0,self._NMax)
+        self._segreto = random.randint(0, self._NMax)
         self._T = self._TMax
         print(self._segreto)
 
@@ -19,7 +19,7 @@ class Model(object):
         """
         Funzione che esegue uno step del gioco
         :param guess: int
-        :return: ritorna 0 se ho vinto, -1 se segreto è più piccolo, 1 se segreto è più grande, 2 se ho finuto le vite
+        :return: ritorna 0 se ho vinto, -1 se segreto è più piccolo, 1 se segreto è più grande, 2 se ho finito le vite
         """
         # da fuori ci arriva un tentativo, confrontiamo il tentativo con il segreto
         self._T -= 1 #decremento il numero di vite
@@ -30,7 +30,7 @@ class Model(object):
         # se arrivo qui, ho ancora vite, quindi il tentativo deve essere valutato
         if guess > self._segreto:
             return -1 #il segreto è più piccolo del tentativo provato
-        return 1 #il segreto è èiù grande di guess
+        return 1 #il segreto è più grande di guess
 
     @property #metodi getter
     def NMax(self):
