@@ -14,9 +14,9 @@ class View(object):
         self._txtOutTMax = ft.TextField(label="T Max", disabled=True, width=200, value=self._controller.getTMax())
         self._txtOutT = ft.TextField(label="T rimanenti", disabled=True, width=200)
 
-        self._txtIn = ft.TextField(label="Tentativo", width=200)
+        self._txtIn = ft.TextField(label="Tentativo", width=200, disabled=True)
         self._btnReset = ft.ElevatedButton(text="Nuova partita", width=200, on_click=self._controller.reset) #qua non metto le parentesi perchè devo dire al pulsante quale metodo chiamare
-        self._btnPlay = ft.ElevatedButton(text="Gioca", width=200, on_click=self._controller.play)
+        self._btnPlay = ft.ElevatedButton(text="Gioca", width=200, on_click=self._controller.play, disabled=True)
 
         self._lv = ft.ListView(expand=True)
 

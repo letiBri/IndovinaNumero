@@ -46,7 +46,7 @@ class Controller(object):
             self._view.update()
             return
         elif res == 2: #ho finito tutte le vite
-            self._view._lv.controls.append(ft.Text(f"Mi dispiace, hai finito le vite.Il segreto era {self._model.segreto}"))
+            self._view._lv.controls.append(ft.Text(f"Mi dispiace, hai finito le vite. Il segreto era {self._model.segreto}"))
             self._view._btnPlay.disabled = True
             self._view._txtIn.disabled = True
             self._view.update()
